@@ -34,7 +34,7 @@ We call this “collaborative advice”, where communication flows between clien
 
 The main drawback of this approach, of course, is the time and effort required to deliver collaborative advice.  How can the modern adviser deliver this advice, at scale?
 
-## Second Insight - Clients want modern tools/technology
+## Clients want modern tools/technology
 
 Financial Services as a whole has lagged behind other industries when it comes to the adoption of new technologies.  It’s an industry that’s ripe for disruption, a fact validated by the emergence of companies like Harmoney, Prospa, eWay and StockSpot, who are gradually taking market share out of key sub-sectors.
 
@@ -46,7 +46,7 @@ After fees and convenience, the two most important factors clients consider when
 
 This is in stark contrast to the current status quo. When asked how they currently kept track of their financial records, only 1 in 5 had access to an online portal where they could view all their accounts. By far the most popular method of storage was in a shoebox or equivalent.
 
-![](/img/current.png)
+![null](/img/current.png)
 
 In a time where people are used to being able to access any data at any time right from their phone, how can an adviser compete with the largest institutions to provide the necessary tools that millennials expect?
 
