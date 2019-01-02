@@ -22,6 +22,62 @@ $primary-invert: $kaldi-red-invert
     margin-bottom: 1.5rem
     margin-top: 0
 
+.bioFooter
+  width: 100%
+  max-width: 960px
+  position: relative
+  margin: auto
+  margin-bottom: 50px
+
+.bioWrap
+  flex-direction: column
+
+.display-flex
+  display: flex
+
+.justify-center
+  justify-content: center
+
+.align-center
+  text-align: center
+
+.bioWrapLink
+  position: relative
+  width: 100%
+  justify-content: center
+  ::before
+    position: absolute
+    left: 0
+    top: 50%
+    height: 1px
+    background-color: rgba(0,0,0,.15)
+    content: ""
+    width: 100%
+    display: block
+    z-index: 10
+
+.avatarWrapper
+  overflow: hidden
+  width: 100%
+  justify-content: center
+  flex-shrink: 0
+  line-height: 0
+  position: relative
+
+.avatar
+  border: 1px solid transparent
+  border-radius: 49.9%
+  width: 72px
+  height: 72px
+  box-sizing: border-box
+  background-clip: content-box
+  z-index: 100
+
+.hero
+  font-size: 1.6rem
+  line-height: 1.5
+  font-weight: 600
+
 // Helper Classes
 .full-width-image-container
   width: 100vw
