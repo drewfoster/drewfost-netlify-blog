@@ -6,7 +6,7 @@ const Biography = () => (
 
     <footer className="bioFooter">
       <div className="bioWrap display-flex">
-        <a className="bioWrapLink display-flex" href="#">
+        <a className="bioWrapLink display-flex" href="/">
           <div className="avatarWrapper display-flex">
             <img src="https://media.licdn.com/dms/image/C5603AQH6W5-nLgE_8g/profile-displayphoto-shrink_100_100/0?e=1551916800&amp;v=beta&amp;t=a2ahsS-A3lKtxZsifrVjeY_F44aH7YvRcV9_gGZQCQg" className="avatar" alt="Andrew Foster" />
           </div>
