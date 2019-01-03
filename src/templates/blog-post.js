@@ -13,13 +13,17 @@ export const BlogPostTemplate = ({
   tags,
   title,
   helmet,
-  thumbnail,
+  featuredImage,
 }) => {
   const PostContent = contentComponent || Content
 
   return (
-    <section className="section">
+    <section className="section padding-0">
       {helmet || ''}
+      <div id="blog-featuredImage"
+        className="full-width-image-container margin-top-0"
+        style={{ backgroundImage: `url(${featuredImage})` }}
+      ></div>
       <div className="container content">
         <div className="columns">
           <div className="column is-10 is-offset-1">
@@ -51,7 +55,7 @@ BlogPostTemplate.propTypes = {
   contentComponent: PropTypes.func,
   description: PropTypes.string,
   title: PropTypes.string,
-  thumbnail: PropTypes.string,
+  featuredImage: PropTypes.object,
   helmet: PropTypes.instanceOf(Helmet),
 }
 
@@ -66,7 +70,8 @@ const BlogPost = ({ data }) => {
         helmet={<Helmet title={`${post.frontmatter.title} | Blog`} />}
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
-        thumbnail={post.frontmatter.thumbnail}
+        featuredImage={post.frontmatter.featuredImage.image}
+        featuredImageAlt={post.frontmatter.featuredImage.alt}
       />
     </Layout>
   )
@@ -90,6 +95,10 @@ export const pageQuery = graphql`
         title
         description
         tags
+        featuredImage {
+            alt
+            image
+        }
       }
     }
   }
