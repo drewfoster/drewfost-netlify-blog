@@ -13,6 +13,9 @@ tags:
   - Financial Services
   - Super
 thumbnail: /img/3-strat.jpeg
+featuredImage:
+  alt: Nice Finance Image
+  image: /img/3-strat.jpeg
 ---
 
 
