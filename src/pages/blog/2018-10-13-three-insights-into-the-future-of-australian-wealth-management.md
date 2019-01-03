@@ -11,10 +11,10 @@ description: >-
 tags:
   - Financial Services
   - Connected Investor
-thumbnail: /img/3-strat.jpeg
+thumbnail: /img/paper-3249919_1920.jpg
 featuredImage:
   alt: Nice Finance Image
-  image: /img/3-strat.jpeg
+  image: /img/paper-3249919_1920.jpg
 ---
 > 62% of wealth management clients in Australia think their Financial Adviser would walk past them in the street without recognising them.
 
