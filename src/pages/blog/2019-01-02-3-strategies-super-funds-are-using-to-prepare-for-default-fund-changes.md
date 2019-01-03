@@ -12,6 +12,7 @@ description: >-
 tags:
   - Financial Services
   - Super
+thumbnail: /img/3-strat.jpeg
 ---
 
 
