@@ -1,54 +1,41 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
+import PostPreview from '../components/PostPreview'
+import FirstPostPreview from '../components/FirstPostPreview'
 
 export default class IndexPage extends React.Component {
   render() {
     const { data } = this.props
     const { edges: posts } = data.allMarkdownRemark
+    const firstPost = posts.shift()
+
 
     return (
       <Layout>
         <section className="section">
           <div className="container">
-            <div className="content">
-              <h1 className="has-text-weight-bold is-size-2">Latest Stories</h1>
-            </div>
-            {posts
-              .map(({ node: post }) => (
+              <div className="content">
+                <h1 className="has-text-weight-bold is-size-2">Latest Posts</h1>
+              </div>
                 <div
-                  className="content"
-                  style={{ border: '1px solid #eaecee', padding: '2em 4em' }}
-                  key={post.id}
+                  className="content firstPost-preview"
+                  style={{ border: '1px solid #eaecee', padding: '2em 2em' }}
+                  key={firstPost.node.id}
                 >
-                <div className="columns">
-                  <div className="column is-3">
-                    <img className="blog-post-image-preview"
-                      src={post.frontmatter.featuredImage.image}
-                      alt={post.frontmatter.featuredImage.alt}
-                      />
-                  </div>
-                  <div className="column is-9">
-                    <p>
-                      <Link className="has-text-primary" to={post.fields.slug}>
-                        {post.frontmatter.title}
-                      </Link>
-                      <span> &bull; </span>
-                      <small>{post.frontmatter.date}</small>
-                    </p>
-                    <p>
-                      {post.excerpt}
-                      <br />
-                      <br />
-                      <Link className="button is-small" to={post.fields.slug}>
-                        Keep Reading →
-                      </Link>
-                    </p>
-                  </div>
+                  <FirstPostPreview post={firstPost.node}/>
                 </div>
-                </div>
-              ))}
+                {posts
+                  .map(({ node: post }) => (
+                    <div
+                      className="content post-preview"
+                      style={{ border: '1px solid #eaecee', padding: '2em 2em' }}
+                      key={post.id}
+                    >
+                      <PostPreview post={post} />
+                    </div>
+                  ))}
           </div>
         </section>
       </Layout>
@@ -72,7 +59,7 @@ export const pageQuery = graphql`
     ) {
       edges {
         node {
-          excerpt(pruneLength: 400)
+          excerpt(pruneLength: 200)
           id
           fields {
             slug
@@ -81,6 +68,7 @@ export const pageQuery = graphql`
             title
             templateKey
             date(formatString: "MMMM DD, YYYY")
+            description
             featuredImage {
               image
               alt

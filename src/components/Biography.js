@@ -4,7 +4,7 @@ import './all.sass'
 
 const Biography = () => (
 
-    <footer className="bioFooter">
+    <footer className="bioFooter section">
       <div className="bioWrap display-flex">
         <a className="bioWrapLink display-flex" href="/">
           <div className="avatarWrapper display-flex">
