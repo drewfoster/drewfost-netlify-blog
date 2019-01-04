@@ -22,7 +22,7 @@ export const BlogPostTemplate = ({
       {helmet || ''}
       <div id="blog-featuredImage"
         className="full-width-image-container margin-top-0"
-        style={{ backgroundImage: `url(${featuredImage})` }}
+        style={{ backgroundImage: `url(${featuredImage.image})` }}
       ></div>
       <div className="container content" style={{padding: '0 1em'}}>
         <div className="columns">
@@ -70,8 +70,7 @@ const BlogPost = ({ data }) => {
         helmet={<Helmet title={`${post.frontmatter.title} | Blog`} />}
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
-        featuredImage={post.frontmatter.featuredImage.image}
-        featuredImageAlt={post.frontmatter.featuredImage.alt}
+        featuredImage={post.frontmatter.featuredImage}
       />
     </Layout>
   )

@@ -9,8 +9,8 @@ export default class IndexPage extends React.Component {
   render() {
     const { data } = this.props
     const { edges: posts } = data.allMarkdownRemark
-    const firstPost = posts.shift()
-
+    let featured = posts[0].node
+    let otherPosts = posts.slice(1)
 
     return (
       <Layout>
@@ -22,11 +22,11 @@ export default class IndexPage extends React.Component {
                 <div
                   className="content firstPost-preview"
                   style={{ border: '1px solid #eaecee', padding: '2em 2em' }}
-                  key={firstPost.node.id}
+                  key={featured.id}
                 >
-                  <FirstPostPreview post={firstPost.node}/>
+                  <FirstPostPreview post={featured}/>
                 </div>
-                {posts
+                {otherPosts
                   .map(({ node: post }) => (
                     <div
                       className="content post-preview"
