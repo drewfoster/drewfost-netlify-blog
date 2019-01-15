@@ -15,7 +15,7 @@ const Biography = () => (
           <h2 className="hero">Andrew Foster</h2>
         </div>
         <div className="display-flex justify-center">
-          <p className="align-center">I've worked in Financial Services for the last 10 years, across Wealth Management, Insurance and Banking. I currently work with companies across Financial Services, working to assist them in understanding how Salesforce can be used as a tool for growth and for transformation into a more customer centric organisation.</p>
+          <p className="align-center">I've worked in Financial Services for the last 10 years, across Wealth Management, Insurance and Banking. I currently work with companies across Financial Services, to assist them in understanding how technology can be used as a tool for growth and for transformation into a customer centric organisation.</p>
         </div>
       </div>
     </footer>
